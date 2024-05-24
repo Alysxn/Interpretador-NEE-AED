@@ -1,0 +1,42 @@
+    Sintaxe da linguagem Nee
+
+    Função: Iniciada com um nome formado por apenas uma letra maiuscula (sem parametros)
+    , seguido de espaço, seguido de ":" e quebra de linha, sequencia de comandos nee identados com 4 espaços e terminado com linha em branco
+
+    Z :
+        PRINT 2
+        A
+
+    A : 
+        PRINT 1
+        PRINT 3
+
+    
+    A palavra PRINT é reservada para impressão: PRINT, seguido de espaço, seguido de um número inteiro não-negativo.
+
+    PRINT 10
+
+    Função inicial - semelhante ao main
+
+    Z :
+    
+
+    Cada linha de código será atribuido a um pseudo-endereço de memória - ou seja - cada
+    linha será armazenada em uma lista estática
+
+    Quando uma função A chamar uma função B, o pseudo-endereço da linha seguinte à linha de
+    chamada de B será guardado, pois quando a execução da função B terminar o interpretador 
+    deverá retornar para A e continuar a execução do código
+
+    Será utilizado uma pilha com implementação dinâmica para tratar o processo de chamada de
+    funções e seu retorno às funções chamadoras
+
+
+
+
+
+Possíveis passos:
+  
+
+
+
