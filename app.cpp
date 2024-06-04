@@ -5,6 +5,8 @@
 
 using namespace std;
 
+//Projeto AED1 - Implementação por:  Alyson Souza Silva e Luiza Marinho Diniz Schirmer
+
 template<typename T>
 class NoFila{
 public:
@@ -256,6 +258,8 @@ public:
 
         cout << "index de Z :" <<  posicaoInicioZ << "\n";
         cout << "index fim de Z :" << posicaoFinalZ << "\n";
+
+
         while(indexZ != posicaoFinalZ)
         {
             // caso seja um print, adicionará a fila
