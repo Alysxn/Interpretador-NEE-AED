@@ -18,6 +18,8 @@ public:
     NoFila(T _print) : print(_print), prox(nullptr) {}
 };
 
+// Fila de Prints
+
 template<typename T>
 class filaPrintNee{
 private:
@@ -60,6 +62,8 @@ public:
 
     No(T _funcao) : funcao(_funcao), prox(nullptr) {}
 };
+
+// Pilha de funções
 
 template<typename T>
 class PilhaFuncaoNee{
@@ -112,12 +116,14 @@ public:
             topo = topo->prox;
             delete temp;
         }
-        delete fundo;  // Delete the sentinel node
+        delete fundo;  
         fundo = nullptr;
         topo = nullptr;
     }
 
 };
+
+// Classe principal do Codigo Nee para envios, verificacoes e conversoes 
 
 template<typename T>
 class CodigoNee{
@@ -135,14 +141,21 @@ public:
 
     void recebeLinha(T _linha){
         linha = _linha;
+
+        // Verifica se a linha recebida é a função principal Z :
+
         if(linha == "Z :"){
             funcaoNee->empilhaFuncao(linha);
         }
+
+        // Se a linha recebida for diferente de Z : entretando o final for :, é uma função, portanto é empilhada
 
         if (linha != "Z :" && !linha.empty() && linha.back() == ':') {
             funcaoNee->empilhaFuncao(linha);
         }
     }
+
+    // Verifica se a linha enviada é um Print X onde X é qualquer número inteiro positivo <= 99  
 
     void verificaPrintNee(T p, filaPrintNee<T> &fila){
         if(p.substr(0, 9) == "    PRINT"){
@@ -153,15 +166,21 @@ public:
         }
     }
 
+    // Verifica se é uma chamada de função
+
     bool verificaFuncao(T &funcao){
         return funcao.length() == 5;
     }
+
+    // Converte uma chamada de Função N para N :
 
     T converteFuncao(T &funcao){
         funcao.erase(0, 4);
         return funcao + " :";
     }
 };
+
+// Lista estática para armazenamento das linhas do código
 
 template<typename T>
 class ListaCodigoNee{
@@ -189,6 +208,8 @@ public:
         }
     }
 
+    // Método para buscar funções N : onde N é qualquer letra diferente de Z. - retorna o index dessas funções na lista estática
+
     int buscaFuncao(T funcao){
         for(int i = 0; i < TAM; i++){
             if (codigo[i].linha == funcao)
@@ -199,6 +220,8 @@ public:
         }
         return 0;
     }
+
+    // Método para compilar as funcoes != de Z
 
     void compilaFuncoes(T funcao){
         bool fimFuncao = false;
@@ -220,6 +243,8 @@ public:
             }
         }
     }
+
+    // Método para compilar Z
 
     void compila(){
         int posicaoInicioZ = -1;
