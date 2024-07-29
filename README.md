@@ -1,4 +1,4 @@
-# README - Projeto Prático - Algoritmo e Estrutura de Dados 1
+# Interpretador Nee - Projeto Prático - Algoritmo e Estrutura de Dados 1
 
 ## Descrição do Projeto
 
