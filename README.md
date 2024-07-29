@@ -30,7 +30,7 @@ O principal objetivo deste projeto é exercitar e avaliar habilidades em algorit
 3. **Fila**:
    - Controla a ordem de impressão, garantindo que os valores a serem impressos sejam exibidos na sequência correta.
 ## Exemplo de entrada e saída:
-<img src="Interpretador-NEE-AED/img/nee" alt="Exemplo de entrada e saída do interpretador NEE">
+<img src="/img/nee.png" alt="Exemplo de entrada e saída do interpretador NEE">
 
 ## Funcionalidades
 
