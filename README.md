@@ -43,4 +43,4 @@ O projeto foi desenvolvido utilizando o compilador GCC. Para compilar e executar
 2. Abra o terminal e navegue até o diretório do arquivo.
 3. Compile o código:
    ```bash
-   g++ -o PP1 PP1.cpp
+   g++ -o NEE NEE.cpp
