@@ -1,4 +1,4 @@
-# README - Projeto Prático 1 (PP1)
+# README - Projeto Prático - Algoritmo e Estrutura de Dados 1
 
 ## Descrição do Projeto
 
